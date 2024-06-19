@@ -33,7 +33,9 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <div className="navbar__logo">nextmap</div>
+        <Link className="navbar__logo" href="/">
+          🗺️ JMaT Jip
+        </Link>
         <div className="navbar__list">
           {navigation.map((v) => (
             <Link className="navbar__list--item" key={v.id} href={v.url}>
@@ -50,7 +52,7 @@ const Navbar = () => {
         <div className={`navbar--mobile ${isOpen && "is-open"}`}>
           <div className="navbar__list--mobile">
             {navigation.map((v) => (
-              <Link className="navbar__list--item--mobile" key={v.id} href={v.url}>
+              <Link className="navbar__list--item--mobile" key={v.id} href={v.url} onClick={() => setIsOpen(false)}>
                 {v.text}
               </Link>
             ))}
