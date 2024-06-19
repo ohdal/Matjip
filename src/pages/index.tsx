@@ -1,5 +1,9 @@
+import Layout from "@/component/Layout";
+
 export default function Home() {
   return (
-    <div>INDEX PAGE</div>
+    <Layout>
+      <div>INDEX PAGE</div>
+    </Layout>
   );
 }
